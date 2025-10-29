@@ -1,45 +1,26 @@
 //============================================================================
 // Platform      : Bootcamp Week 1 Contest
-// Problem Title : CamelCase
+// Problem Title : Vector Sort
 // Author        : H M Nafees N Islam
 // Institution   : North South University (NSU), Department of CSE
-// Date          : October 27, 2025 
+// Date          : October 28, 2025 
 //
 // Problem Statement:
-//   There is a sequence of words in CamelCase as a string of letters `s`,
-//   having the following properties:
+//   You are given n integers. Sort the n integers and print the sorted order.
+//   Store the integers in a vector. Vectors are sequence containers representing 
+//   arrays that can change in size.
 //
-//   • It is a concatenation of one or more words consisting of English letters.
-//   • All letters in the first word are lowercase.
-//   • For each of the subsequent words, the first letter is uppercase and the
-//     rest of the letters are lowercase.
-//
-//   Given the string `s`, determine the number of words in it.
-//
-// Example:
-//   s = "oneTwoThree"
-//   There are 3 words in the string: "one", "Two", "Three".
-//
-// Function Description:
-//   Complete the camelcase function.
-//
-//   camelcase has the following parameter(s):
-//     string s: the string to analyze
-//
-//   Returns:
-//     int: the number of words in s.
-//
-// Input Format:
-//   A single line containing string s.
-//
-// Constraints:
-//   1 ≤ length of s ≤ 10^5
+// Input:
+//   - The first line contains an integer n — the number of integers.
+//   - The second line contains n integers.
 //
 // Output:
-//   Print the number of words in the CamelCase string.
+//   - Print the integers in the sorted order one by one in a single line 
+//     followed by a space.
 //
-// Time Limit: 1 second
-// Memory Limit: 256 MB
+// Constraints:
+//   - 1 ≤ n ≤ 10^5
+//   - 1 ≤ each integer in the vector ≤ 10^9
 //============================================================================
 
 /*
@@ -63,8 +44,6 @@ using namespace std;
 #define INPUT_ll(n) ll n; cin>>n;
 #define INPUT_string(s) string s; cin>>s;
 #define INPUT_char(c) char c; cin>>c;
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
 #define STR_LEN(s) ((int)s.size())
 #define STR_REV(s) reverse(all(s))
 #define STR_SORT_ASC(s) sort(all(s))
@@ -94,16 +73,15 @@ using ull = unsigned long long;
 
 void solve()
 {
-    INPUT_string(s);
-    int count = 1;
-    STR_SORT_ASC(s);
-
-    for (char c : s) {
-        if (isupper(c)) count++;
-        else break;
+    INPUT_int(n);
+    vl(a,n);
+    INPUT_ARRAY(a,n);
+    SORT_ASC(a);
+    for(auto val : a)
+    {
+        cout << val << " ";
     }
-
-    cout << count << endl;
+    cout<<endl;
 }
 
 int main()
@@ -120,14 +98,11 @@ int main()
 }
 
 /*
-   💡 Solution Logic:
-   - The string `s` represents a sequence of words joined in CamelCase.
-   - The first word is all lowercase.
-   - Every new word begins with an uppercase letter.
-   - Initialize count = 1 (for the first word).
-   - For each character in the string:
-       • If the character is uppercase, increment count.
-   - Finally, print the total count of words.
+   Solution Logic:
+  - Read the number of integers n.
+  - Store the integers in a vector.
+  - Use the built-in sort function to sort the vector in ascending order.
+  - Print the sorted integers separated by a space.
 */
 
 /*
