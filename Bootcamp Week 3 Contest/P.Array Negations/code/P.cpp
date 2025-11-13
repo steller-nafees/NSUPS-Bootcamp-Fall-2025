@@ -1,5 +1,5 @@
 //============================================================================
-// Platform      : Codeforces 
+// Platform      : Bootcamp Week 3 Contest
 // Problem Title : 102152I. Array Negations
 // Author        : H M Nafees N Islam
 // Institution   : North South University (NSU), Computer Science And Engineering
