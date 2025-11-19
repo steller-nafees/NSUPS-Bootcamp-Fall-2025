@@ -91,8 +91,8 @@ using namespace std;
 #define PQ_SUM(pq,sum) ll sum = 0;while(!pq.empty()){sum += pq.top();pq.pop();}
 #define Output_precision(pr,res) cout << fixed << setprecision(pr) << res << endl;
 #define uo_map(a,keytype, valuetype) unordered_map<keytype,valuetype> a;
-#define umap_input(a,n,dtype) for(int i = 0; i<n; i++){dtype x; cin>>x; a[x]++;};
-#define umap_freqCount(a, freq) for(auto x : a){freq[x]++;};
+#define umap_input(a,n,dtype) for(int i = 0; i<n; i++){dtype x; cin>>x; a[x]++;}
+#define umap_freqCount(a, freq) for(auto x : a){freq[x]++;}
 // Type aliases
 using ll = long long;
 using ull = unsigned long long;
