@@ -137,11 +137,11 @@ int main()
 {
     FAST_IO;
 
-    int t; cin>>t; 
-    while (t--) solve();
+    //int t; cin>>t; 
+    //while (t--) solve();
     
     //For single test case, comment the above 3 lines and uncomment below line
-    //solve();
+    solve();
 
     return 0;
 }
